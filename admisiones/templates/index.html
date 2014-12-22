@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="{{STATIC_URL}}css/estilos_tabla.css">
+</head>
+<body>
+		<div>Admisiones vs Moodle</div>
+		<div>Moodle vs Admisiones</div>
+		<br>
+		<table>
+			<tr>
+				<th>Están en ambos ({{cuenta_coinciden_en_ambos}})</th>
+			</tr>
+			{%for coinciden_ambos in coinciden_en_ambos%}
+					<tr>
+						<td>{{coinciden_ambos}}</td>
+					</tr>
+			{%endfor%}
+		</table>
+		<table>
+			<tr>
+				<th>No están en Moodle sólo Admisiones ({{cuenta_admisiones_no_estan_en_moodle}})</th>
+			</tr>
+			{%for no_estan in admisiones_no_estan_en_moodle%}
+					<tr>
+						<td>{{no_estan}}</td>
+					</tr>
+			{%endfor%}
+		</table>
+		<table>
+			<tr>
+				<th>Están en ambos ({{cuenta_coinciden_en_ambos_moodle}})</th>
+			</tr>
+			{%for coinciden in coinciden_en_ambos_moodle%}
+					<tr>
+						<td>{{coinciden}}</td>
+					</tr>
+			{%endfor%}
+		</table>
+		<table>
+			<tr>
+				<th>No están en Admisiones sólo Moodle ({{cuenta_moodle_no_estan_en_admisiones}})</th>
+			</tr>
+			{%for no_estan in moodle_no_estan_en_admisiones%}
+					<tr>
+						<td>{{no_estan}}</td>
+					</tr>
+			{%endfor%}
+		</table>
+</body>
+</html>
