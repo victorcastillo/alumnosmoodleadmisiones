@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from admisiones.models import *
+from admisiones.models_miutel import *
 from moodle.models import *
 from django.contrib.auth.models import User
 

@@ -13,9 +13,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'inscripcionv2',
-        'PASSWORD': 'nbYyCN7L',
-        'HOST': '23.253.104.69',
-        'USER': 'vcastito',
+        'PASSWORD': 'inscripcion101',
+        #'HOST': '23.253.104.69',
+        'HOST': '198.61.210.234',
+        'USER': 'inscripcion',
         'PORT': '',
         'OPTIONS': {
           'init_command': 'SET storage_engine=INNODB'

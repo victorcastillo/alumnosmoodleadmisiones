@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alumnos por reinscribir</title>
+</head>
+<body>
+		<div>{{ contador }} Materias Genéricas asignadas dentro del ciclo AB015</div>
+		
+		<br>
+		<table border="1">
+			<tr>
+				<th>Listado</th>
+				<th>Matrícula</th>
+				<th>Programa</th>
+				<th>Estado Alumno/Programa</th>
+				<th>Clave Asignatura</th>
+				<th>Nombre de la Asignatura</th>
+				<th>Bimestre</th>
+				<th>Estado de la Asignatura</th>
+			</tr>
+			{% for reg in genericas %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td>{{ reg.matricula }}</td>
+					<td>{{ reg.licenciatura }}</td>
+					<td>{{ reg.estado1 }} | {{ reg.estado2 }}</td>
+					<td>{{ reg.clave_asignatura }}</td>
+					<td>{{ reg.asignatura }}</td>
+					<td>{{ reg.bimestre }}</td>
+					<td>{{ reg.estado_materia }}</td>
+				</tr>
+			{%endfor%}
+		</table>
+</body>
+</html>

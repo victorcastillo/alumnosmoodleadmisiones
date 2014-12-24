@@ -1,6 +1,8 @@
 from django.conf.urls.defaults import patterns,  url
 from admisiones.views import *
 
+from admisiones.views2 import *
+
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -17,4 +19,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+)
+
+urlpatterns += patterns('',
+    url(r'^por_reinscribir/(?P<ciclo_id>\d+)/$', por_reinscribir, name='views2.por_reinscribir'),
+    url(r'^materias_genericas/(?P<ciclo_id>\d+)/$', materias_genericas, name='views2.materias_genericas'),
 )

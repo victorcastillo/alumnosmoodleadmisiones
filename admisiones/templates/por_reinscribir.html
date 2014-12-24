@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alumnos por reinscribir</title>
+</head>
+<body>
+		<div>{{ contador }} alumnos que no están reinscritos y están en condiciones de ser reinscritos</div>
+		
+		<br>
+		<table border="1">
+			<tr>
+				<th>Listado</th>
+				<th>Matrícula</th>
+				<th>Programa</th>
+				<th>Estado</th>
+				<th>Tipo Ingreso</th>
+				<th>Materias Predictamen</th>
+				<th>Materias Dictamen</th>
+				<th>Materias Aprobadas</th>
+				<th>Área Mayor</th>
+				<th>Área Menor 1</th>
+				<th>Área Menor 2</th>
+			</tr>
+			{% for reg in faltantes %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td>{{ reg.matricula }}</td>
+					<td>{{ reg.licenciatura }}</td>
+					<td>{{ reg.estado }} | {{ reg.estado2 }}</td>
+					<td>{{ reg.tipo_inscripcion_licenciatura }}</td>
+					<td>{{ reg.materias_predictamen }}</td>
+					<td>{{ reg.materias_dictamen }}</td>
+					<td>{{ reg.materias_aprobadas }}</td>
+					<td>{{ reg.area_mayor }}</td>
+					<td>{{ reg.area_menor }}</td>
+					<td>{{ reg.area_menor1 }}</td>
+				</tr>
+			{%endfor%}
+		</table>
+</body>
+</html>
